@@ -1,0 +1,287 @@
+{
+  "name": "MEMOS Benchmark Evaluation",
+  "summary": {
+    "name": "MEMOS Benchmark Evaluation",
+    "total_cases": 13,
+    "aggregate_metrics": {
+      "recall@1": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "count": 13
+      },
+      "recall@3": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "count": 13
+      },
+      "recall@5": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "count": 13
+      },
+      "precision@1": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "count": 13
+      },
+      "precision@3": {
+        "mean": 0.3333333333333333,
+        "min": 0.3333333333333333,
+        "max": 0.3333333333333333,
+        "count": 13
+      },
+      "mrr": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "count": 13
+      },
+      "ndcg@3": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "count": 13
+      }
+    }
+  },
+  "results": [
+    {
+      "test_case_id": "stable_preference_01_q1",
+      "retrieval_mode": "hybrid_rrf",
+      "metrics": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "precision@1": 1.0,
+        "precision@3": 0.3333333333333333,
+        "mrr": 1.0,
+        "ndcg@3": 1.0
+      },
+      "metadata": {
+        "question": "What programming language does the user prefer for backend work?",
+        "question_type": "preference",
+        "record_id": "stable_preference_01"
+      }
+    },
+    {
+      "test_case_id": "project_info_01_q1",
+      "retrieval_mode": "hybrid_rrf",
+      "metrics": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "precision@1": 1.0,
+        "precision@3": 0.3333333333333333,
+        "mrr": 1.0,
+        "ndcg@3": 1.0
+      },
+      "metadata": {
+        "question": "What project is the user working on?",
+        "question_type": "factual",
+        "record_id": "project_info_01"
+      }
+    },
+    {
+      "test_case_id": "project_info_01_q2",
+      "retrieval_mode": "hybrid_rrf",
+      "metrics": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "precision@1": 1.0,
+        "precision@3": 0.3333333333333333,
+        "mrr": 1.0,
+        "ndcg@3": 1.0
+      },
+      "metadata": {
+        "question": "What frontend framework does the user's project use?",
+        "question_type": "factual",
+        "record_id": "project_info_01"
+      }
+    },
+    {
+      "test_case_id": "preference_update_01_q1",
+      "retrieval_mode": "hybrid_rrf",
+      "metrics": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "precision@1": 1.0,
+        "precision@3": 0.3333333333333333,
+        "mrr": 1.0,
+        "ndcg@3": 1.0
+      },
+      "metadata": {
+        "question": "What editor does the user currently use?",
+        "question_type": "preference",
+        "record_id": "preference_update_01"
+      }
+    },
+    {
+      "test_case_id": "temporal_fact_01_q1",
+      "retrieval_mode": "hybrid_rrf",
+      "metrics": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "precision@1": 1.0,
+        "precision@3": 0.3333333333333333,
+        "mrr": 1.0,
+        "ndcg@3": 1.0
+      },
+      "metadata": {
+        "question": "Does the user have any upcoming deadlines?",
+        "question_type": "temporal",
+        "record_id": "temporal_fact_01"
+      }
+    },
+    {
+      "test_case_id": "contradiction_01_q1",
+      "retrieval_mode": "hybrid_rrf",
+      "metrics": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "precision@1": 1.0,
+        "precision@3": 0.3333333333333333,
+        "mrr": 1.0,
+        "ndcg@3": 1.0
+      },
+      "metadata": {
+        "question": "What is the user's current preferred programming language?",
+        "question_type": "preference",
+        "record_id": "contradiction_01"
+      }
+    },
+    {
+      "test_case_id": "scoped_preference_01_q1",
+      "retrieval_mode": "hybrid_rrf",
+      "metrics": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "precision@1": 1.0,
+        "precision@3": 0.3333333333333333,
+        "mrr": 1.0,
+        "ndcg@3": 1.0
+      },
+      "metadata": {
+        "question": "What does the user use for frontend development?",
+        "question_type": "preference",
+        "record_id": "scoped_preference_01"
+      }
+    },
+    {
+      "test_case_id": "scoped_preference_01_q2",
+      "retrieval_mode": "hybrid_rrf",
+      "metrics": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "precision@1": 1.0,
+        "precision@3": 0.3333333333333333,
+        "mrr": 1.0,
+        "ndcg@3": 1.0
+      },
+      "metadata": {
+        "question": "What does the user use for data science?",
+        "question_type": "preference",
+        "record_id": "scoped_preference_01"
+      }
+    },
+    {
+      "test_case_id": "relationship_01_q1",
+      "retrieval_mode": "hybrid_rrf",
+      "metrics": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "precision@1": 1.0,
+        "precision@3": 0.3333333333333333,
+        "mrr": 1.0,
+        "ndcg@3": 1.0
+      },
+      "metadata": {
+        "question": "Who leads the data engineering team?",
+        "question_type": "relationship",
+        "record_id": "relationship_01"
+      }
+    },
+    {
+      "test_case_id": "relationship_01_q2",
+      "retrieval_mode": "hybrid_rrf",
+      "metrics": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "precision@1": 1.0,
+        "precision@3": 0.3333333333333333,
+        "mrr": 1.0,
+        "ndcg@3": 1.0
+      },
+      "metadata": {
+        "question": "What tools does the data engineering team use?",
+        "question_type": "relationship",
+        "record_id": "relationship_01"
+      }
+    },
+    {
+      "test_case_id": "unanswerable_01_q1",
+      "retrieval_mode": "hybrid_rrf",
+      "metrics": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "precision@1": 1.0,
+        "precision@3": 0.3333333333333333,
+        "mrr": 1.0,
+        "ndcg@3": 1.0
+      },
+      "metadata": {
+        "question": "What is the user's favorite color?",
+        "question_type": "unanswerable",
+        "record_id": "unanswerable_01"
+      }
+    },
+    {
+      "test_case_id": "goal_01_q1",
+      "retrieval_mode": "hybrid_rrf",
+      "metrics": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "precision@1": 1.0,
+        "precision@3": 0.3333333333333333,
+        "mrr": 1.0,
+        "ndcg@3": 1.0
+      },
+      "metadata": {
+        "question": "What are the user's goals for this year?",
+        "question_type": "factual",
+        "record_id": "goal_01"
+      }
+    },
+    {
+      "test_case_id": "obsolete_01_q1",
+      "retrieval_mode": "hybrid_rrf",
+      "metrics": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "precision@1": 1.0,
+        "precision@3": 0.3333333333333333,
+        "mrr": 1.0,
+        "ndcg@3": 1.0
+      },
+      "metadata": {
+        "question": "Has the user completed their thesis?",
+        "question_type": "temporal",
+        "record_id": "obsolete_01"
+      }
+    }
+  ]
+}

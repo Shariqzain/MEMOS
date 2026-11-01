@@ -1,0 +1,1 @@
+"""MEMOS core package."""

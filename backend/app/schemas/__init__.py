@@ -1,0 +1,1 @@
+"""MEMOS schemas package."""

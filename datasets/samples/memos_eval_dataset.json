@@ -1,0 +1,300 @@
+[
+  {
+    "record_id": "stable_preference_01",
+    "description": "User states a clear programming language preference",
+    "conversation": [
+      {"role": "user", "content": "I really love Python for backend development. It's my go-to language.", "turn_id": 1},
+      {"role": "assistant", "content": "Python is a great choice for backend development! Its rich ecosystem with frameworks like Django, Flask, and FastAPI makes it very productive.", "turn_id": 2}
+    ],
+    "memory_annotations": [
+      {
+        "content": "User prefers Python for backend development",
+        "category": "preference",
+        "entities": ["Python"],
+        "is_update": false,
+        "is_contradiction": false,
+        "expected_action": "create"
+      }
+    ],
+    "eval_questions": [
+      {
+        "question": "What programming language does the user prefer for backend work?",
+        "expected_answer": "Python",
+        "question_type": "preference"
+      }
+    ]
+  },
+  {
+    "record_id": "project_info_01",
+    "description": "User describes an ongoing project",
+    "conversation": [
+      {"role": "user", "content": "I'm building a project called MEMOS. It uses React for the frontend and FastAPI for the backend.", "turn_id": 1},
+      {"role": "assistant", "content": "MEMOS sounds like an interesting project! React and FastAPI is a solid stack.", "turn_id": 2}
+    ],
+    "memory_annotations": [
+      {
+        "content": "User is building a project called MEMOS using React (frontend) and FastAPI (backend)",
+        "category": "project",
+        "entities": ["MEMOS", "React", "FastAPI"],
+        "is_update": false,
+        "is_contradiction": false,
+        "expected_action": "create"
+      }
+    ],
+    "eval_questions": [
+      {
+        "question": "What project is the user working on?",
+        "expected_answer": "MEMOS",
+        "question_type": "factual"
+      },
+      {
+        "question": "What frontend framework does the user's project use?",
+        "expected_answer": "React",
+        "question_type": "factual"
+      }
+    ]
+  },
+  {
+    "record_id": "preference_update_01",
+    "description": "User updates a preference — explicit correction",
+    "conversation": [
+      {"role": "user", "content": "Actually, I've switched from VS Code to Neovim as my primary editor. I find it much faster.", "turn_id": 1},
+      {"role": "assistant", "content": "Neovim is great for speed! The transition from VS Code can be challenging but rewarding.", "turn_id": 2}
+    ],
+    "memory_annotations": [
+      {
+        "content": "User's primary editor is Neovim (switched from VS Code)",
+        "category": "preference",
+        "entities": ["Neovim", "VS Code"],
+        "is_update": true,
+        "is_contradiction": false,
+        "expected_action": "update"
+      }
+    ],
+    "eval_questions": [
+      {
+        "question": "What editor does the user currently use?",
+        "expected_answer": "Neovim",
+        "question_type": "preference"
+      }
+    ]
+  },
+  {
+    "record_id": "temporal_fact_01",
+    "description": "Time-sensitive information",
+    "conversation": [
+      {"role": "user", "content": "I have a thesis defense scheduled for next Friday.", "turn_id": 1},
+      {"role": "assistant", "content": "Good luck with your thesis defense next Friday! Would you like help preparing?", "turn_id": 2}
+    ],
+    "memory_annotations": [
+      {
+        "content": "User has a thesis defense scheduled for next Friday",
+        "category": "temporal",
+        "entities": ["thesis defense"],
+        "is_update": false,
+        "is_contradiction": false,
+        "expected_action": "create"
+      }
+    ],
+    "eval_questions": [
+      {
+        "question": "Does the user have any upcoming deadlines?",
+        "expected_answer": "Thesis defense next Friday",
+        "question_type": "temporal"
+      }
+    ]
+  },
+  {
+    "record_id": "contradiction_01",
+    "description": "Contradictory statements about the same preference",
+    "conversation": [
+      {"role": "user", "content": "I actually don't like Python anymore. TypeScript is better for everything now.", "turn_id": 1},
+      {"role": "assistant", "content": "TypeScript has been gaining a lot of ground! Full-stack TypeScript can be very productive.", "turn_id": 2}
+    ],
+    "memory_annotations": [
+      {
+        "content": "User now prefers TypeScript over Python",
+        "category": "preference",
+        "entities": ["TypeScript", "Python"],
+        "is_update": true,
+        "is_contradiction": true,
+        "expected_action": "supersede"
+      }
+    ],
+    "eval_questions": [
+      {
+        "question": "What is the user's current preferred programming language?",
+        "expected_answer": "TypeScript",
+        "question_type": "preference"
+      }
+    ]
+  },
+  {
+    "record_id": "scoped_preference_01",
+    "description": "Preference that is scoped — should not conflict with general preference",
+    "conversation": [
+      {"role": "user", "content": "For frontend specifically, I always use TypeScript with React. But for data science I still use Python.", "turn_id": 1},
+      {"role": "assistant", "content": "That's a practical approach! TypeScript+React for frontend and Python for data science is very common.", "turn_id": 2}
+    ],
+    "memory_annotations": [
+      {
+        "content": "User uses TypeScript with React for frontend development",
+        "category": "preference",
+        "entities": ["TypeScript", "React"],
+        "is_update": false,
+        "is_contradiction": false,
+        "expected_action": "create"
+      },
+      {
+        "content": "User uses Python for data science work",
+        "category": "preference",
+        "entities": ["Python"],
+        "is_update": false,
+        "is_contradiction": false,
+        "expected_action": "create"
+      }
+    ],
+    "eval_questions": [
+      {
+        "question": "What does the user use for frontend development?",
+        "expected_answer": "TypeScript with React",
+        "question_type": "preference"
+      },
+      {
+        "question": "What does the user use for data science?",
+        "expected_answer": "Python",
+        "question_type": "preference"
+      }
+    ]
+  },
+  {
+    "record_id": "irrelevant_01",
+    "description": "Casual conversation with no useful memory content",
+    "conversation": [
+      {"role": "user", "content": "Thanks for the help! That was great.", "turn_id": 1},
+      {"role": "assistant", "content": "You're welcome! Feel free to ask anytime.", "turn_id": 2}
+    ],
+    "memory_annotations": [],
+    "eval_questions": []
+  },
+  {
+    "record_id": "relationship_01",
+    "description": "Multi-hop relationship between entities",
+    "conversation": [
+      {"role": "user", "content": "My colleague Sarah leads the data engineering team. She uses Spark and Airflow for our data pipelines at Acme Corp.", "turn_id": 1},
+      {"role": "assistant", "content": "It sounds like Sarah has set up a solid data infrastructure at Acme Corp with Spark and Airflow!", "turn_id": 2}
+    ],
+    "memory_annotations": [
+      {
+        "content": "User's colleague Sarah leads the data engineering team at Acme Corp",
+        "category": "relationship",
+        "entities": ["Sarah", "Acme Corp"],
+        "is_update": false,
+        "is_contradiction": false,
+        "expected_action": "create"
+      },
+      {
+        "content": "Sarah's team uses Spark and Airflow for data pipelines",
+        "category": "factual",
+        "entities": ["Sarah", "Spark", "Airflow"],
+        "is_update": false,
+        "is_contradiction": false,
+        "expected_action": "create"
+      }
+    ],
+    "eval_questions": [
+      {
+        "question": "Who leads the data engineering team?",
+        "expected_answer": "Sarah",
+        "question_type": "relationship"
+      },
+      {
+        "question": "What tools does the data engineering team use?",
+        "expected_answer": "Spark and Airflow",
+        "question_type": "relationship"
+      }
+    ]
+  },
+  {
+    "record_id": "unanswerable_01",
+    "description": "Question that should not be answerable from memories",
+    "conversation": [],
+    "memory_annotations": [],
+    "eval_questions": [
+      {
+        "question": "What is the user's favorite color?",
+        "expected_answer": "",
+        "question_type": "unanswerable"
+      }
+    ]
+  },
+  {
+    "record_id": "duplicate_01",
+    "description": "Repeated fact that should not create duplicate memory",
+    "conversation": [
+      {"role": "user", "content": "As I mentioned before, I really prefer Python for backend development.", "turn_id": 1},
+      {"role": "assistant", "content": "Yes, you've mentioned your preference for Python before!", "turn_id": 2}
+    ],
+    "memory_annotations": [
+      {
+        "content": "User prefers Python for backend development",
+        "category": "preference",
+        "entities": ["Python"],
+        "is_update": false,
+        "is_contradiction": false,
+        "expected_action": "ignore"
+      }
+    ],
+    "eval_questions": []
+  },
+  {
+    "record_id": "goal_01",
+    "description": "User states a clear goal",
+    "conversation": [
+      {"role": "user", "content": "My goal for this year is to learn Rust and contribute to open source projects.", "turn_id": 1},
+      {"role": "assistant", "content": "Learning Rust and contributing to open source are great goals! Would you like recommendations?", "turn_id": 2}
+    ],
+    "memory_annotations": [
+      {
+        "content": "User's goal is to learn Rust and contribute to open source projects this year",
+        "category": "goal",
+        "entities": ["Rust"],
+        "is_update": false,
+        "is_contradiction": false,
+        "expected_action": "create"
+      }
+    ],
+    "eval_questions": [
+      {
+        "question": "What are the user's goals for this year?",
+        "expected_answer": "Learn Rust and contribute to open source",
+        "question_type": "factual"
+      }
+    ]
+  },
+  {
+    "record_id": "obsolete_01",
+    "description": "Fact that becomes obsolete",
+    "conversation": [
+      {"role": "user", "content": "I completed my thesis defense last week. It went well! Now I'm a PhD graduate.", "turn_id": 1},
+      {"role": "assistant", "content": "Congratulations on completing your thesis defense and earning your PhD!", "turn_id": 2}
+    ],
+    "memory_annotations": [
+      {
+        "content": "User has completed their PhD (thesis defense is done)",
+        "category": "factual",
+        "entities": ["PhD"],
+        "is_update": true,
+        "is_contradiction": false,
+        "expected_action": "supersede"
+      }
+    ],
+    "eval_questions": [
+      {
+        "question": "Has the user completed their thesis?",
+        "expected_answer": "Yes, the user has completed their thesis defense and is now a PhD graduate",
+        "question_type": "temporal"
+      }
+    ]
+  }
+]
